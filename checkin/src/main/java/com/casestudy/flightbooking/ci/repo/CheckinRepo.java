@@ -1,9 +1,11 @@
 package com.casestudy.flightbooking.ci.repo;
 
-public class CheckinRepo {
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
-	public CheckinRepo() {
-		// TODO Auto-generated constructor stub
-	}
+import com.casestudy.flightbooking.ci.models.CheckinDetails;
 
+public interface CheckinRepo extends MongoRepository<CheckinDetails,String>{
+@Query("{'name':?0,'fid':?1}")
+CheckinDetails get(String name,String fid);
 }

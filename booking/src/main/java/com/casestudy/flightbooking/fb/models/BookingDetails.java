@@ -2,60 +2,58 @@ package com.casestudy.flightbooking.fb.models;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("Booking")
+@Document(collection="Booking")
 public class BookingDetails {
-
-String fid;
-	
-	String name,status,fclass,payment;
-
-	public BookingDetails(String fid, String name, String status, String fclass, String payment) {
+	String fid,fare,fclass,status,name;
+    String payment_status;
+	public BookingDetails(String fid, String fare, String fclass, String status, String name,String payment_status) {
 		super();
 		this.fid = fid;
-		this.name = name;
-		this.status = status;
+		this.fare = fare;
 		this.fclass = fclass;
-		this.payment = payment;
+		this.status = status;
+		this.name = name;
+		this.payment_status=payment_status;
 	}
-
-	public String getFid() {
+	public BookingDetails() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getfid() {
 		return fid;
 	}
-
-	public void setFid(String fid) {
+	public void setfid(String fid) {
 		this.fid = fid;
 	}
-
-	public String getName() {
-		return name;
+	public String getFare() {
+		return fare;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setFare(String fare) {
+		this.fare = fare;
 	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public String getFclass() {
 		return fclass;
 	}
-
 	public void setFclass(String fclass) {
 		this.fclass = fclass;
 	}
-
-	public String getPayment() {
-		return payment;
+	public String getStatus() {
+		return status;
 	}
-
-	public void setPayment(String payment) {
-		this.payment = payment;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPayment_status() {
+		return payment_status;
+	}
+	public void setPayment_status(String payment_status) {
+		this.payment_status = payment_status;
+	}
+	
+	
 }

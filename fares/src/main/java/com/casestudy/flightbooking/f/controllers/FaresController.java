@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.casestudy.flightbooking.f.model.FareDetails;
 import com.casestudy.flightbooking.f.repo.FareRepo;
-import com.casestudy.flightbooking.f.services.FlightBookingService;
+import com.casestudy.flightbooking.f.services.FlightFareService;
 import com.google.common.base.Optional;
 
 /*import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +30,7 @@ public String hey() {
 public class FaresController {
 @Autowired
 FareRepo rp;
-FlightBookingService s1=new FlightBookingService();
+FlightFareService s1=new FlightFareService();
 
 @GetMapping("/{id}")
 public Optional<FareDetails> getfare(@PathVariable String id) {

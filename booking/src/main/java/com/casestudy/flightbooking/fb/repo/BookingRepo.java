@@ -14,7 +14,8 @@ public interface BookingRepo extends MongoRepository <BookingDetails,String>
 	
 	@Query("{'fid':?0,'name':?1}")
 	public BookingDetails get(String fid,String name);
-@Query(value="{'fid' : ?0,'name':?1}", delete = true)
-public BookingDetails delete(String fid,String name);
+	
+    @Query(value="{'fid' : ?0,'name':?1}", delete = true)
+    public BookingDetails delete(String fid,String name);
 	
 }

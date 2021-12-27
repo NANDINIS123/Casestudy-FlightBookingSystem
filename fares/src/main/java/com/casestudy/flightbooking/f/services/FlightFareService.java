@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.casestudy.flightbooking.f.model.FareDetails;
 
 @Service
-public class FlightBookingService {
+public class FlightFareService {
 	String id,fare,fin="0";
 	public String getdata(FareDetails f1,String type) {
 		
@@ -42,7 +42,7 @@ public class FlightBookingService {
 						return fin;
 					}
 					else
-						return "sorry no mapping";		
+						return "na";		
 	}
 	public String fid() {
 		return id;

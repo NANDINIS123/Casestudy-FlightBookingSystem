@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 
 @Configuration
-public class FlightBookingSecurity extends WebSecurityConfigurerAdapter{
+public class FlightFareSecurity extends WebSecurityConfigurerAdapter{
 	 @Override
 	    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 	        auth.inMemoryAuthentication()
